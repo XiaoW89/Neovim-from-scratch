@@ -72,3 +72,6 @@ keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 -- nvim-tree --
 keymap("n", "<C-f>", ":NvimTreeToggle<CR>", opts)
 
+-- SymbolsOutline --
+keymap("n", "so", ":SymbolsOutline<CR>", opts)
+
