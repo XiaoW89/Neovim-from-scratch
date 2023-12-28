@@ -75,3 +75,4 @@ keymap("n", "<C-f>", ":NvimTreeToggle<CR>", opts)
 -- SymbolsOutline --
 keymap("n", "so", ":SymbolsOutline<CR>", opts)
 
+keymap("n", "fs", "<Plug>(leap-forward)")

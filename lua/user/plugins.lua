@@ -92,7 +92,8 @@ return packer.startup(function(use)
 	-- Git
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
-	use { "ggandor/lightspeed.nvim"}
+    -- leap
+	use { "ggandor/leap.nvim", config = require("leap").create_default_mappings() }
 
     -- symbols-outline
     use {"simrat39/symbols-outline.nvim"}
@@ -103,6 +104,35 @@ return packer.startup(function(use)
             require("trailblazer").setup({
                 -- your custom config goes here
             }) end,}
+
+    -- nvim-treesitter-textobjects --
+    -- use{
+    --   "nvim-treesitter/nvim-treesitter-textobjects",
+    --   after = "nvim-treesitter",
+    --   requires = "nvim-treesitter/nvim-treesitter",
+    -- }
+
+    -- nvim-treesitter-textsubjects --
+    -- use{
+    --     "RRethy/nvim-treesitter-textsubjects", 
+    --     lazy = true,
+    --     event = { "User FileOpened" },
+    --     after = "nvim-treesitter",
+    --     dependencies = { "nvim-treesitter/nvim-treesitter" },
+    --     config = function()
+    --         require("nvim-treesitter.configs").setup({
+    --             textsubjects = {
+    --                 enable = true,
+    --                 prev_selection = ",",
+    --                 keymaps = {
+    --                     ["."] = "textsubjects-smart",
+    --                     [";"] = "textsubjects-container-outer",
+    --                     ["i;"] = "textsubjects-container-inner",
+    --                 },
+    --             },
+    --         })
+    --     end,
+    -- }
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
