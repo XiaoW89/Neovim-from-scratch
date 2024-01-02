@@ -21,4 +21,5 @@ require "user.whichkey"
 require "user.autocommands"
 require "user.symbols-outline"
 require "user.trailblazer"
+require('leap').create_default_mappings()
 --require "user.nvim-treesitter-textsbjects"

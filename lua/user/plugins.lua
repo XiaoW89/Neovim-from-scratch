@@ -93,7 +93,7 @@ return packer.startup(function(use)
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
     -- leap
-	use { "ggandor/leap.nvim", config = require("leap").create_default_mappings() }
+    use { "ggandor/leap.nvim"}
 
     -- symbols-outline
     use {"simrat39/symbols-outline.nvim"}
