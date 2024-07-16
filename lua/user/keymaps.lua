@@ -24,7 +24,7 @@ keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("n", "<leader>sw", ":w !sudo tee %<CR>", opts)
+keymap("n", "lsw", ":w !sudo tee %<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -73,6 +73,10 @@ keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 keymap("n", "<C-f>", ":NvimTreeToggle<CR>", opts)
 
 -- SymbolsOutline --
-keymap("n", "<C-s>", ":SymbolsOutline<CR>", opts)
+keymap("n", "ls", ":SymbolsOutline<CR>", opts)
 
-keymap("n", "fs", "<Plug>(leap-forward)", opts)
+ -- keymap("n", "S", "<Plug>(leap-forward)", opts) --
+
+ -- neogen --
+keymap("n", "ng", ":Neogen<CR>", opts)
+
