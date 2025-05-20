@@ -80,3 +80,7 @@ keymap("n", "ls", ":SymbolsOutline<CR>", opts)
  -- neogen --
 keymap("n", "ng", ":Neogen<CR>", opts)
 
+
+-- hop --
+keymap("n", "<S-s>", ":HopWord<CR>", opts)
+

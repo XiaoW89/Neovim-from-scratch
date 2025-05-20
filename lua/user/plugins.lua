@@ -93,7 +93,7 @@ return packer.startup(function(use)
 	use { "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" }
 
     -- leap
-    use { "ggandor/leap.nvim"}
+    --    use { "ggandor/leap.nvim"}
 
     -- symbols-outline
     use {"simrat39/symbols-outline.nvim"}
@@ -121,6 +121,17 @@ return packer.startup(function(use)
         -- install jsregexp (optional!:).
         run = "make install_jsregexp"
     })
+
+
+    use {
+        'smoka7/hop.nvim',
+         tag = '*', -- optional but strongly recommended
+         config = function()
+            -- you can configure Hop the way you like here; see :h hop-config
+         require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+         end
+    }
+
     -- nvim-treesitter-textobjects --
     -- use{
     --   "nvim-treesitter/nvim-treesitter-textobjects",
