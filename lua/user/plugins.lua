@@ -46,7 +46,13 @@ return packer.startup(function(use)
     use { "numToStr/Comment.nvim" }
     use { "JoosepAlviste/nvim-ts-context-commentstring" }
     use { "kyazdani42/nvim-web-devicons" }
-    use { "kyazdani42/nvim-tree.lua" }
+    use { "kyazdani42/nvim-tree.lua",
+        config = function()
+            require("nvim-tree").setup({
+                -- your custom config goes here
+            }) end,}
+
+
     use { "akinsho/bufferline.nvim" }
     use { "moll/vim-bbye" }
     use { "nvim-lualine/lualine.nvim" }
