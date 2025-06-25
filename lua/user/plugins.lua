@@ -81,8 +81,8 @@ return packer.startup(function(use)
 
 	-- LSP
     use { "neovim/nvim-lspconfig" } -- enable LSP
-    use { "williamboman/mason.nvim" } -- simple to use language server installer
-    use { "williamboman/mason-lspconfig.nvim" }
+    use { "williamboman/mason.nvim", commit = "fc98833b" } -- simple to use language server installer
+    use { "williamboman/mason-lspconfig.nvim" , commit = "1a31f82"}
     use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
     use { "RRethy/vim-illuminate" }
 
