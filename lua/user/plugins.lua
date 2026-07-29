@@ -76,7 +76,6 @@ return packer.startup(function(use)
     use { "hrsh7th/cmp-nvim-lua" }
 
 	-- Snippets
-    use { "L3MON4D3/LuaSnip" } --snippet engine
     use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
 	-- LSP
@@ -87,7 +86,7 @@ return packer.startup(function(use)
     use { "RRethy/vim-illuminate" }
 
 	-- Telescope
-    use { "nvim-telescope/telescope.nvim" }
+    use { "nvim-telescope/telescope.nvim", tag = "0.1.8" } -- master requires nvim 0.11+
 
 	-- Treesitter
     use { "nvim-treesitter/nvim-treesitter" }
@@ -133,6 +132,23 @@ return packer.startup(function(use)
             -- you can configure Hop the way you like here; see :h hop-config
          require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
          end
+    }
+
+    -- markview.nvim: markdown preview/render in buffer --
+    use {
+        "OXY2DEV/markview.nvim",
+        requires = {
+            "nvim-treesitter/nvim-treesitter",
+            "kyazdani42/nvim-web-devicons",
+        },
+        config = function()
+            require("markview").setup({
+                preview = {
+                    filetypes = { "markdown", "quarto", "rmd" },
+                    ignore_buftypes = {},
+                },
+            })
+        end,
     }
 
     -- nvim-treesitter-textobjects --
